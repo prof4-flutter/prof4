@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+
+//экран магазина
 class ShopScreen extends StatefulWidget {
   const ShopScreen({super.key});
 
@@ -116,6 +118,7 @@ class _ShopScreenState extends State<ShopScreen> {
   }
 }
 
+//меню айтемов
 class CardItem extends StatelessWidget {
   const CardItem({super.key, required this.size});
   final Size size;
@@ -147,6 +150,7 @@ class CardItem extends StatelessWidget {
   }
 }
 
+// модели категорий
 class CategoryCant extends StatelessWidget {
   const CategoryCant({super.key, required this.text});
   final String text;

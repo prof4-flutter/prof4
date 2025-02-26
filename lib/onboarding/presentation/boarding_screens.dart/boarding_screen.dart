@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:project_prof4/home_screen.dart';
 import 'package:project_prof4/onboarding/shop_screen.dart';
 
+
+//онбординг
 class BoardingScreen extends StatefulWidget {
   const BoardingScreen({super.key});
 
@@ -67,6 +69,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
   }
 }
 
+//экраны онбординга
 
 class FirstScreen extends StatelessWidget {
 
@@ -125,6 +128,7 @@ class SecondScreen extends StatelessWidget {
     );
   }
 }
+
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({super.key});
