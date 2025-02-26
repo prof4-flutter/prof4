@@ -61,7 +61,7 @@ class _AuthScreenState extends State<AuthScreen> {
               Text('!',style: TextStyle(fontStyle: FontStyle.italic,fontSize: 32),)
             ],
           ),
-          Text('Заполните Свои данные или \nпродолжите через социальные медиа',style: TextStyle(fontSize: 15,color: Color.fromRGBO(112, 123, 129, 1)),textAlign: TextAlign.center,),
+          Text('Заполните Свои данные Или \nпродолжите через социальные медиа',style: TextStyle(fontSize: 15,color: Color.fromRGBO(112, 123, 129, 1)),textAlign: TextAlign.center,),
           SizedBox(height: size.height* 0.05,),
           // форма ввода
           SizedBox(
@@ -73,6 +73,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 decoration: InputDecoration(hoverColor: Colors.grey,focusColor: Colors.grey,fillColor: Colors.grey,
                 
                 hintText: 'xyz@gmail.com',
+                hintStyle: TextStyle(color: Colors.grey),
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
                   
                 ),
@@ -89,7 +90,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 controller: _passwordController,
                 
                 obscureText: isVisible,
-                decoration: InputDecoration(disabledBorder: InputBorder.none,hoverColor: Colors.grey,focusColor: Colors.grey,fillColor: Colors.grey,
+                decoration: InputDecoration(hintStyle: TextStyle(color: Colors.grey),disabledBorder: InputBorder.none,hoverColor: Colors.grey,focusColor: Colors.grey,fillColor: Colors.grey,
                 suffixIcon: IconButton(icon: isVisible ? SvgPicture.asset('assets/Vector.svg',height: 13,): SvgPicture.asset('assets/Union.svg',height: 13,),onPressed: (){
                   setState(() {
                     isVisible = !isVisible;
@@ -111,7 +112,7 @@ class _AuthScreenState extends State<AuthScreen> {
           ],
         ),
         SizedBox(
-          height: size.height * 0.1,
+          height: size.height * 0.04,
         ),
 
         //кнопка
@@ -126,7 +127,7 @@ class _AuthScreenState extends State<AuthScreen> {
               ),),
             ),
           ),
-          SizedBox(height: size.height * 0.1,),
+          SizedBox(height: size.height * 0.15,),
 
           //текст
           Row(
