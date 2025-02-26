@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_prof4/onboarding/presentation/widget/splash_screen.dart';
 
 
 
@@ -8,8 +9,5 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white,
-    );
-  }
+    return SplashScreen();  }
 }
