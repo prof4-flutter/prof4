@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:project_prof4/home_screen.dart';
-import 'package:project_prof4/onboarding/shop_screen.dart';
+import 'package:project_prof4/shop/presentation/widget/home_screen.dart';
+import 'package:project_prof4/shop/presentation/widget/shop_screen.dart';
+import 'package:project_prof4/navigation_bar.dart';
 
 
 //онбординг
@@ -57,7 +58,7 @@ class _BoardingScreenState extends State<BoardingScreen> {
           height: size.height * 0.05,
           child: ElevatedButton(onPressed: (){
             isLast ?  Navigator.push(context, MaterialPageRoute(builder:(context) {
-              return ShopScreen();
+              return NavigationBarS();
             },)): _pageController.nextPage(duration: Duration(microseconds: 20), curve: Curves.linear);
           }, child: Text('${
             isLast ? 'Далее' : 'Начать'

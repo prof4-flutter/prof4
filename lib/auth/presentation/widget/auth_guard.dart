@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_prof4/auth/presentation/widget/auth_screen.dart';
-import 'package:project_prof4/home_screen.dart';
+import 'package:project_prof4/shop/presentation/widget/home_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 
