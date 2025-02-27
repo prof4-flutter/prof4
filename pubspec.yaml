@@ -62,6 +62,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/bignike.png
     - assets/Hamburger.svg
     - assets/Union.svg
     - assets/Vector.svg
@@ -76,6 +77,7 @@ flutter:
     - assets/notification.svg
     - assets/nike_zoom.svg
     - assets/nike.png
+    - assets/frame.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
