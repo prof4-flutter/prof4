@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project_prof4/auth/presentation/widget/auth_guard.dart';
 import 'package:project_prof4/auth/presentation/widget/auth_screen.dart';
+import 'package:project_prof4/shop/presentation/widget/shopping_card.dart';
+import 'package:project_prof4/shop/presentation/widget/shopping_card2.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 

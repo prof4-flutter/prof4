@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:project_prof4/auth/domain/supabase_service.dart';
 import 'package:project_prof4/shop/presentation/widget/card_item_detailed.dart';
 import 'package:project_prof4/shop/presentation/widget/search_screen.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 
 //экран магазина
@@ -13,6 +15,13 @@ class ShopScreen extends StatefulWidget {
 }
 
 class _ShopScreenState extends State<ShopScreen> {
+
+  @override
+  void initState() {
+    SupabaseService().signOut();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;

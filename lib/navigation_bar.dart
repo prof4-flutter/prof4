@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:project_prof4/auth/presentation/widget/auth_screen.dart';
 import 'package:project_prof4/shop/presentation/widget/favorites_screen.dart';
 import 'package:project_prof4/shop/presentation/widget/shop_screen.dart';
 import 'package:project_prof4/shop/presentation/widget/shopping_card.dart';
@@ -21,8 +22,7 @@ class _NavigationBarState extends State<NavigationBarS> {
     ShopScreen(),
     FavoriteSreen(),
     Z3(),
-    z4(),
-    z5()
+    AuthScreen()
 
 
   ];

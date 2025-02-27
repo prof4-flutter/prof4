@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_prof4/shop/presentation/widget/shopping_card2.dart';
 
 
 // prof4 10:49 27.02
@@ -51,7 +52,9 @@ class _ShoppingCardState extends State<ShoppingCard> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [Text('Итого'),Text('₽814.15',style: TextStyle(color: Colors.blue),)],),
               SizedBox(height: size.height * 0.06,),
               Row(),
-              SizedBox(width: size.width * 0.8,child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(72, 178, 231, 1)),onPressed: (){}, child: 
+              SizedBox(width: size.width * 0.8,child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Color.fromRGBO(72, 178, 231, 1)),onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder:(context) => ShoppingCard2(),));
+              }, child: 
               Text('Оформить заказ',style: TextStyle(color: Colors.white),),),)
             
             ],),

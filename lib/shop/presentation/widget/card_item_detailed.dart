@@ -91,7 +91,7 @@ class MiniCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: size.width * 0.14,
+        width: size.width * 0.12,
         height: 60,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),color: Colors.white),
         child: Image.asset(image),
