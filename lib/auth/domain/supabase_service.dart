@@ -10,6 +10,14 @@ class SupabaseService{
     return await supabase.signInWithPassword(password: password,email: email);
 
   }
+  Future<void> signOut()async{
+    return await supabase.signOut();
+    
+  }
+
+  Future<AuthResponse> register({required String password,required String email})async{
+    return await supabase.signUp(password: password,email: email);
+  }
 
 
   }
