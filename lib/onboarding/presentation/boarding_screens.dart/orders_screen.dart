@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import '../../../shop/presentation/widget/shopping_card2.dart';
 
@@ -84,6 +85,9 @@ class OrderScreenItem extends StatelessWidget {
   }
 }
 
+// prof4 11:07 28.02
+// экран заказов детальный
+
 class OrderScreenDetailed extends StatelessWidget {
   const OrderScreenDetailed({super.key,});
 
@@ -118,8 +122,11 @@ class OrderScreenDetailed extends StatelessWidget {
         children: [
           Text('Адрес\n1082 Аэропорт, Нигерии',textAlign: TextAlign.start,),
           
+          
         ],
-      )
+      ),
+      SizedBox(child: Image.asset('assets/Map.png')),
+      Text('Способ оплаты')
                   ],)
       
               ],),),

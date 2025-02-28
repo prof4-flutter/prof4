@@ -83,6 +83,7 @@ flutter:
     - assets/nike_zoom.svg
     - assets/nike.png
     - assets/frame.svg
+    - assets/Map.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
