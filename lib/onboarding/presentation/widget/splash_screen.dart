@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:project_prof4/onboarding/presentation/boarding_screens.dart/boarding_screen.dart';
 
 
+// prof4 11:05 28.02
 // сплеш скрины
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
