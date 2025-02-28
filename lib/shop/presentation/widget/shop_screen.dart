@@ -1,12 +1,16 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:project_prof4/auth/domain/supabase_service.dart';
+import 'package:project_prof4/drawerpage/presentation/profile_page.dart';
+import 'package:project_prof4/main.dart';
 import 'package:project_prof4/shop/presentation/widget/card_item_detailed.dart';
 import 'package:project_prof4/shop/presentation/widget/search_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 
-//экран магазина
+/// prof4 9:00 28.02
+// карточка с экрана подробнестей
 class ShopScreen extends StatefulWidget {
   const ShopScreen({super.key});
 
@@ -22,10 +26,12 @@ class _ShopScreenState extends State<ShopScreen> {
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      
 
 
       backgroundColor: Color.fromRGBO(247, 247, 247, 1),
@@ -34,100 +40,104 @@ class _ShopScreenState extends State<ShopScreen> {
           SvgPicture.asset('assets/bag-2.svg',fit: BoxFit.fitHeight,)
         ],
         backgroundColor: Color.fromRGBO(247, 247, 247, 1),
-        leading: SvgPicture.asset('assets/Hamburger.svg',fit: BoxFit.none,),
+        leading: InkWell(onTap: (){Scaffold.of(context).openDrawer();},child: SvgPicture.asset('assets/Hamburger.svg',fit: BoxFit.none,)),
         title: Text('Главная',style: TextStyle(fontSize: 32,fontWeight: FontWeight.w400),) ,
         centerTitle: true,
       ),
-      body: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
-        
-        SizedBox(height: size.height * 0.01,),
-        SizedBox(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      color: Color.fromRGBO(255, 255, 255, 1)
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                prefix: IconButton(onPressed: ()=>Navigator.push(context, 
-                                MaterialPageRoute(builder:(context)=> SearchScreenZ())),icon:Icon(Icons.search),color: Colors.black,),
-                                hintText:'поиск',
-                                
-                                border: InputBorder.none
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+          
+          SizedBox(height: size.height * 0.01,),
+          SizedBox(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        color: Color.fromRGBO(255, 255, 255, 1)
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  prefix: IconButton(onPressed: ()=>Navigator.push(context, 
+                                  MaterialPageRoute(builder:(context)=> SearchScreenZ())),icon:Icon(Icons.search),color: Colors.black,),
+                                  hintText:'поиск',
+                                  
+                                  border: InputBorder.none
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Icon(Icons.tune)
-                
-              ],
-            
+                  Icon(Icons.tune)
+                  
+                ],
+              
+              ),
             ),
           ),
-        ),
-        SizedBox(height: size.height * 0.03,),
-        Text('Категории',style: TextStyle(fontSize: 16,),),
-        SizedBox(height: size.height * 0.03,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CategoryCant(text: 'Все'),
-            CategoryCant(text: 'OutDoor'),
-            CategoryCant(text: 'Tennis')
-          ],
-        ),
-        SizedBox(height: size.height * 0.03,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Популярое',style: TextStyle(fontSize: 16,),),
-            Text('Все',style: TextStyle(color: Colors.blue),)
-          ],
-        ),SizedBox(height: size.height * 0.03,),  
-                  
-                            Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            CardItem(size: size),
-            CardItem(size: size)
-          ],
-        ),
-        SizedBox(height: size.height * 0.03,),  
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text('Акции',style: TextStyle(fontSize: 16,),),
-            Text('Все',style: TextStyle(color: Colors.blue),)
-          ],
-        ),
-        SizedBox(height: size.height * 0.01,),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset('assets/banner.png'),
-          ],
-        )
-      
-      ],),
+          SizedBox(height: size.height * 0.025,),
+          Text('Категории',style: TextStyle(fontSize: 16,),),
+          SizedBox(height: size.height * 0.025,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CategoryCant(text: 'Все'),
+              CategoryCant(text: 'OutDoor'),
+              CategoryCant(text: 'Tennis')
+            ],
+          ),
+          SizedBox(height: size.height * 0.025,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Популярое',style: TextStyle(fontSize: 16,),),
+              Text('Все',style: TextStyle(color: Colors.blue),)
+            ],
+          ),SizedBox(height: size.height * 0.025,),  
+                    
+                              Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CardItem(size: size),
+              CardItem(size: size)
+            ],
+          ),
+          SizedBox(height: size.height * 0.025,),  
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('Акции',style: TextStyle(fontSize: 16,),),
+              Text('Все',style: TextStyle(color: Colors.blue),)
+            ],
+          ),
+          SizedBox(height: size.height * 0.01,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/banner.png'),
+            ],
+          )
+        
+        ],),
+      ),
     );
   }
 }
 
-//меню айтемов
+// prof4 11:07 28.02
+// меню айтемов
 class CardItem extends StatelessWidget {
   const CardItem({super.key, required this.size});
   final Size size;

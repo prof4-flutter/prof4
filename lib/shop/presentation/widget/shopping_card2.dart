@@ -108,7 +108,7 @@ class _ShoppingCard2State extends State<ShoppingCard2> {
                             backgroundColor: Color.fromRGBO(72, 178, 231, 1)
                           ), onPressed: (){
                             Navigator.push(context, MaterialPageRoute(builder:(context) {
-                              return NavigationBarS();
+                              return NavigationBarS(index:0);
                             },));
                           }, child: Text('Вернуться к покупкам',style: TextStyle(color: Colors.white),)),
                         )
@@ -134,7 +134,8 @@ class _ShoppingCard2State extends State<ShoppingCard2> {
   
 }
 
-
+// prof4 11:07 28.02
+// экран карточек товара
 class ShopMiniCarddd extends StatelessWidget {
   const ShopMiniCarddd({super.key, required this.main, required this.icon, required this.post});
 
